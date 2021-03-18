@@ -1,4 +1,10 @@
 import React from 'react'
+import CharacterCard from '../../components/card'
+import '../../styles/Characters.module.css'
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import { makeStyles } from '@material-ui/core/styles';
 
 const HEADERS = new Headers({
     'Content-type': 'application/x-www-form-urlencoded',
@@ -9,6 +15,19 @@ const INIT = {
     headers: HEADERS,
     mode: 'cors',
 };
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        overflow: 'hidden',
+        backgroundColor: theme.palette.background.paper,
+    },
+    icon: {
+        color: 'rgba(255, 255, 255, 0.54)',
+    },
+}));
 
 export default class Characters extends React.Component{
     constructor(props) {
@@ -35,12 +54,18 @@ export default class Characters extends React.Component{
 
     render() {
         return(
-            <div>
-                {this.state.characters ? (
-                    <div>We have {this.state.characters.length} characters</div>
-                ) : (
-                    <div>No characters</div>
-                )}
+            <div style={{textAlign: 'center'}}>
+                <GridList cellHeight={400} cols={3}>
+                    {this.state.characters ? (
+                        this.state.characters.map(character => (
+                                <GridListTile key={character.id}>
+                                    <CharacterCard character={character} />
+                                </GridListTile>
+                        ))
+                    ) : (
+                        <div>No characters</div>
+                    )}
+                </GridList>
             </div>
 
         )

@@ -8,6 +8,11 @@ body {
   color: white;
 }
 
+.app-style {
+  background-color: #282c34;
+  color: white;
+}
+
 a {
   color: inherit;
   text-decoration: none;

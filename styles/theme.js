@@ -5,6 +5,8 @@ import {fade} from "@material-ui/core";
 export const useStylesCard = makeStyles(theme => ({
     root: {
         maxWidth: 345,
+        marginTop: '2%',
+        backgroundColor: 'red'
     },
     media: {
         height: 0,
@@ -15,27 +17,8 @@ export const useStylesCard = makeStyles(theme => ({
     },
 }));
 
-export const useStylesHeader = makeStyles((theme) => ({
-    appBar: {
-        backgroundColor: "red",
-    },
-    search: {
-        position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: fade(theme.palette.common.white, 0.15),
-        '&:hover': {
-            backgroundColor: fade(theme.palette.common.white, 0.25),
-        },
-        marginRight: theme.spacing(2),
-        marginLeft: 0,
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            marginLeft: theme.spacing(3),
-            width: 'auto',
-        },
-    },
+export const useStylesSearch = makeStyles((theme) => ({
     searchIcon: {
-        padding: theme.spacing(0, 2),
         height: '100%',
         position: 'absolute',
         pointerEvents: 'none',
@@ -54,5 +37,23 @@ export const useStylesHeader = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             width: '20ch',
         },
+    },
+    search: {
+        position: 'relative',
+        borderRadius: theme.shape.borderRadius,
+        backgroundColor: fade(theme.palette.common.white, 0.15),
+        '&:hover': {
+            backgroundColor: fade(theme.palette.common.white, 0.25),
+        },
+        width: '100%',
+        [theme.breakpoints.up('sm')]: {
+            width: 'auto',
+        },
+    },
+}))
+
+export const useStylesHeader = makeStyles((theme) => ({
+    appBar: {
+        backgroundColor: "red",
     },
 }));

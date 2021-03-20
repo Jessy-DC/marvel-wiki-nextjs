@@ -3,7 +3,7 @@ import {Header} from '../components/header'
 
 function MyApp({ Component, pageProps }) {
   return (
-      <div>
+      <div className={'app-style'}>
         <Header />
         <Component {...pageProps} />
       </div>

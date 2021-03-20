@@ -17,11 +17,12 @@ export default class Characters extends React.Component{
         super(props)
         this.state = {
             characters: null,
+            characterSearch: 'A'
         }
     }
 
     componentDidMount() {
-        this.handleApiCall('A')
+        this.handleApiCall(this.state.characterSearch)
     }
 
     handleApiCall = name => {

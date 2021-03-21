@@ -15,7 +15,7 @@ const INIT = {
     mode: 'cors',
 };
 
-export default function getCharacters() {
+export default function Characters() {
     const [characters, setCharacters] = useState([])
     const [characterName, setCharacterName] = useState('A')
     const classes = useStylesSearch();

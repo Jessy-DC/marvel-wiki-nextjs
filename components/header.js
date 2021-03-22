@@ -41,6 +41,11 @@ export function Header(props) {
                                 <Typography variant="h6">Characters</Typography>
                             </MenuItem>
                         </Link>
+                        <Link href={"/comics"}>
+                            <MenuItem>
+                                <Typography variant="h6">Comics</Typography>
+                            </MenuItem>
+                        </Link>
                     </Toolbar>
                 </AppBar>
             </ElevationScroll>

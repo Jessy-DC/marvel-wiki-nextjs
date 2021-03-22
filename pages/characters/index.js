@@ -1,19 +1,10 @@
 import React, {useEffect, useState} from 'react'
-import CharacterCard from '../../components/card'
+import CharacterCard from '../../components/card-character'
 import styles from '../../styles/Characters.module.css'
 import { useStylesSearch } from "../../styles/theme";
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-
-const HEADERS = new Headers({
-    'Content-type': 'application/x-www-form-urlencoded',
-});
-
-const INIT = {
-    methode: 'GET',
-    headers: HEADERS,
-    mode: 'cors',
-};
+import {API_KEY, INIT} from "../../data/key";
 
 export default function Characters() {
     const [characters, setCharacters] = useState([])
@@ -38,7 +29,7 @@ export default function Characters() {
 
     const handleApiCall = name => {
         if(name !== '') {
-            const API_URL = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${characterName}&apikey=3cb9f312871cec62f82dc980caeded2c`;
+            const API_URL = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${characterName}&apikey=${API_KEY}`;
             fetch(API_URL, INIT)
                 .then(response => response.json())
                 .then(json => {

@@ -1,7 +1,6 @@
 import * as React from 'react'
 import {mount, configure} from 'enzyme'
 import Home from '../pages/index'
-import Characters from '../pages/characters/index'
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 configure({ adapter: new Adapter() });

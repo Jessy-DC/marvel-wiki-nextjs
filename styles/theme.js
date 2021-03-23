@@ -2,7 +2,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import {red} from "@material-ui/core/colors";
 import {fade} from "@material-ui/core";
 
-export const useStylesCard = makeStyles(theme => ({
+const useStylesCard = makeStyles(() => ({
     root: {
         maxWidth: 345,
         marginTop: '2%',
@@ -17,7 +17,7 @@ export const useStylesCard = makeStyles(theme => ({
     },
 }));
 
-export const useStylesSearch = makeStyles((theme) => ({
+const useStylesSearch = makeStyles((theme) => ({
     searchIcon: {
         height: '100%',
         position: 'absolute',
@@ -52,8 +52,30 @@ export const useStylesSearch = makeStyles((theme) => ({
     },
 }))
 
-export const useStylesHeader = makeStyles((theme) => ({
+const useStylesHeader = makeStyles(() => ({
     appBar: {
         backgroundColor: "red",
     },
 }));
+
+const useStylesComicCard = makeStyles({
+    root: {
+        maxWidth: 345,
+        marginTop: '2%',
+        backgroundColor: 'red'
+    },
+    media: {
+        height: 450,
+        paddingTop: '56.25%',
+    },
+    card: {
+        fontSize: 16,
+    }
+});
+
+export {
+    useStylesHeader,
+    useStylesCard,
+    useStylesSearch,
+    useStylesComicCard
+}

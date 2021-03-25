@@ -56,7 +56,7 @@ export default function Characters() {
                     onChange={handleChange}
                 />
             </div>
-            <div className={styles.grid}>
+            <div className={styles.grid} id={"characters-grid"}>
                 {characters ? (
                     characters.map(character => (
                         <div key={character.id}>

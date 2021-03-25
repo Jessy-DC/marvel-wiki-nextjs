@@ -16,7 +16,9 @@
     "@material-ui/core": "^4.11.3",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/user-event": "^13.0.10",
+    "identity-obj-proxy": "^3.0.0",
     "next": "10.0.9",
+    "node-fetch": "^2.6.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-test-renderer": "^17.0.1"
@@ -44,5 +46,11 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }

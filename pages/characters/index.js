@@ -5,6 +5,7 @@ import { useStylesSearch } from "../../styles/theme";
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import {API_KEY, INIT} from "../../data/key";
+import fetch from "node-fetch";
 
 export default function Characters() {
     const [characters, setCharacters] = useState([])

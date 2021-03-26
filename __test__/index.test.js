@@ -19,6 +19,15 @@ test('render Header component', () => {
 test('render Character component', () => {
     const idElement = 'characters-grid'
     const getById = queryByAttribute.bind(null, 'id');
-    const dom = render(<Characters />)
-    expect(getById(dom.container, idElement)).toBeInTheDocument()
+    let promise = new Promise((resolve) => {
+        setTimeout(function() {
+            let dom = render(<Characters />)
+            resolve(dom)
+        }, 3000)
+    })
+    promise.then((dom) => {
+        expect(getById(dom.container, idElement)).toBeInTheDocument()
+    })
+
 })
+

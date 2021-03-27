@@ -5,7 +5,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import {useStylesCard} from "../styles/theme";
+import { useStylesCard } from "../styles/theme";
 
 export default function CharacterCard({character}) {
     const classes = useStylesCard();

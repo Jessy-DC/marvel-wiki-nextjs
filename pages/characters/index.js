@@ -4,7 +4,7 @@ import styles from '../../styles/Characters.module.css'
 import { useStylesSearch } from "../../styles/theme";
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-import {API_KEY, INIT} from "../../data/key";
+import { API_KEY, INIT } from "../../data/key";
 import fetch from "node-fetch";
 
 export default function Characters() {

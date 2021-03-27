@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import ComicCard from "../../components/card-comic";
 import styles from '../../styles/Characters.module.css'
-import {API_KEY, INIT} from "../../data/key";
+import { API_KEY, INIT } from "../../data/key";
 
 export default function Comics() {
     const [comics, setComics] = useState([])
